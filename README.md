@@ -1,12 +1,39 @@
-# Pokémon Platinum
+<div align="center">
 
-This is a WIP decompilation of Pokémon Platinum. For instructions on how to set up the repository, please read [`INSTALL.md`](INSTALL.md).
+**A Pokémon Platinum romhack that never leaves <br/> Gen 4, and never stops growing.**
 
-If you are interested in contributing, please read [`CONTRIBUTING.md`](/CONTRIBUTING.md).
+*New content, old soul.*
 
-This repository builds the following ROMs:
+<img src="./assets/banner.png" alt="title-screen" width="95%">
 
-* [**pokeplatinum.us.nds**](https://datomatic.no-intro.org/index.php?page=show_record&s=28&n=4997) (Rev 1): `sha1: 0862ec35b24de5c7e2dcb88c9eea0873110d755c`
-* [**pokeplatinum.us.nds**](https://datomatic.no-intro.org/index.php?page=show_record&s=28&n=3541) (Rev 0): `sha1: ce81046eda7d232513069519cb2085349896dec7`
+</div>
 
-For contacts and other pret projects, see [pret.github.io](https://pret.github.io/).
+## Overview
+
+**Platinum stays Platinum.**
+
+No jump to a later generation, no engine swap. The Gen 4 baseline is the point, not a limitation.
+
+From there, it grows without end: new areas and challenges, new systems, quality-of-life, small mechanical tweaks. 
+
+Everything is built inside the world the game already has, never bolted onto a newer one.
+
+## Building
+
+Toolchain setup is unchanged from upstream. See [`INSTALL.md`](INSTALL.md).
+
+```sh
+make rom     # build → build/pokeplatinum.us.nds
+make run     # build, then launch in melonDS
+```
+
+The result runs on real hardware or in any DS emulator (melonDS, DeSmuME).
+
+`make check` asserts the build is byte-for-byte identical to retail Platinum.
+
+**It fails here by design.** That's what a romhack is. Use `make rom`.
+
+## Credits
+
+The decompilation is entirely [pret](https://pret.github.io/)'s work.
+This fork builds on top of it and does not aim to contribute upstream.
